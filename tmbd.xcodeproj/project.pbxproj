@@ -16,6 +16,11 @@
 		F5AF21762AEC4AC3005D7B91 /* tmbdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF21752AEC4AC3005D7B91 /* tmbdTests.swift */; };
 		F5AF21802AEC4AC3005D7B91 /* tmbdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF217F2AEC4AC3005D7B91 /* tmbdUITests.swift */; };
 		F5AF21822AEC4AC3005D7B91 /* tmbdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF21812AEC4AC3005D7B91 /* tmbdUITestsLaunchTests.swift */; };
+		F5AF21902AEC7C0F005D7B91 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F5AF218F2AEC7C0F005D7B91 /* RxCocoa */; };
+		F5AF21922AEC7C0F005D7B91 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F5AF21912AEC7C0F005D7B91 /* RxRelay */; };
+		F5AF21942AEC7C0F005D7B91 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F5AF21932AEC7C0F005D7B91 /* RxSwift */; };
+		F5AF21972AEC7C32005D7B91 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = F5AF21962AEC7C32005D7B91 /* SkeletonView */; };
+		F5AF219A2AEC7C69005D7B91 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F5AF21992AEC7C69005D7B91 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5AF21972AEC7C32005D7B91 /* SkeletonView in Frameworks */,
+				F5AF21942AEC7C0F005D7B91 /* RxSwift in Frameworks */,
+				F5AF21922AEC7C0F005D7B91 /* RxRelay in Frameworks */,
+				F5AF21902AEC7C0F005D7B91 /* RxCocoa in Frameworks */,
+				F5AF219A2AEC7C69005D7B91 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +153,13 @@
 			dependencies = (
 			);
 			name = tmbd;
+			packageProductDependencies = (
+				F5AF218F2AEC7C0F005D7B91 /* RxCocoa */,
+				F5AF21912AEC7C0F005D7B91 /* RxRelay */,
+				F5AF21932AEC7C0F005D7B91 /* RxSwift */,
+				F5AF21962AEC7C32005D7B91 /* SkeletonView */,
+				F5AF21992AEC7C69005D7B91 /* Kingfisher */,
+			);
 			productName = tmbd;
 			productReference = F5AF215B2AEC4ABA005D7B91 /* tmbd.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +232,11 @@
 				Base,
 			);
 			mainGroup = F5AF21522AEC4ABA005D7B91;
+			packageReferences = (
+				F5AF218E2AEC7C0F005D7B91 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F5AF21952AEC7C32005D7B91 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				F5AF21982AEC7C69005D7B91 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = F5AF215C2AEC4ABA005D7B91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -607,6 +629,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5AF218E2AEC7C0F005D7B91 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+		F5AF21952AEC7C32005D7B91 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.30.4;
+			};
+		};
+		F5AF21982AEC7C69005D7B91 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5AF218F2AEC7C0F005D7B91 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AF218E2AEC7C0F005D7B91 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F5AF21912AEC7C0F005D7B91 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AF218E2AEC7C0F005D7B91 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F5AF21932AEC7C0F005D7B91 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AF218E2AEC7C0F005D7B91 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F5AF21962AEC7C32005D7B91 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AF21952AEC7C32005D7B91 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+		F5AF21992AEC7C69005D7B91 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AF21982AEC7C69005D7B91 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5AF21532AEC4ABA005D7B91 /* Project object */;
 }
