@@ -10,13 +10,6 @@ import RxSwift
 import RxRelay
 import RxCocoa
 
-/// Data binding wrappers on MVVM using `@propertyWrapper`
-/// See https://iosexample.com/data-binding-framework-view-model-binding-on-mvvm-written-using-propertywrapper-and-resultbuilder/
-///
-
-/// Binding type of property with `BehaviorRelay` as its `projectedValue`
-/// Can use any type for its property type `wrappedValue`.
-///
 @propertyWrapper
 struct Mutable<Value> {
     var wrappedValue: Value {

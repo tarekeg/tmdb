@@ -9,16 +9,22 @@ import UIKit
 import Kingfisher
 
 class CastCell: UICollectionViewCell {
+    
+    // MARK: - IBOutlets
 
     @IBOutlet private weak var castImageView: UIImageView!
     @IBOutlet weak var castNameLabel: UILabel!
+    
+    // MARK: - Public functions
     
     func configure(cast: Cast) {
         castNameLabel.text = cast.name
         downloadImage(imageStringUrl: cast.profilePath)
     }
     
-    func downloadImage(imageStringUrl: String) {
+    // MARK: - Private functions
+    
+    private func downloadImage(imageStringUrl: String) {
         guard let url = URL(string: "https://image.tmdb.org/t/p/w500" + imageStringUrl) else {
             return
         }
@@ -26,17 +32,4 @@ class CastCell: UICollectionViewCell {
         castImageView.kf.setImage(with: url)
     }
 
-}
-
-
-extension UIView {
-    @IBInspectable var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
-            layer.masksToBounds = newValue > 0
-        }
-    }
 }

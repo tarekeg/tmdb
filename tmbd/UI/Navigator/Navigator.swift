@@ -27,7 +27,6 @@ class Navigator: NavigatorProtocol {
     
 }
 
-
 extension UIStoryboard {
     
     static func instantiate<T: UIViewController>(_ type: T.Type, in storyboardName: String? = nil, storyboardId: String? = nil) -> T {

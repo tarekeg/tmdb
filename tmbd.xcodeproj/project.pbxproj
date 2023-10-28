@@ -53,6 +53,7 @@
 		F5AF21EE2AED2960005D7B91 /* CastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF21EC2AED2960005D7B91 /* CastCell.swift */; };
 		F5AF21EF2AED2960005D7B91 /* CastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5AF21ED2AED2960005D7B91 /* CastCell.xib */; };
 		F5AF21F22AED3BB5005D7B91 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F5AF21F12AED3BB5005D7B91 /* IQKeyboardManagerSwift */; };
+		F5AF21F52AED40E3005D7B91 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF21F42AED40E3005D7B91 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		F5AF21EA2AED22C1005D7B91 /* CastMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMapper.swift; sourceTree = "<group>"; };
 		F5AF21EC2AED2960005D7B91 /* CastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCell.swift; sourceTree = "<group>"; };
 		F5AF21ED2AED2960005D7B91 /* CastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastCell.xib; sourceTree = "<group>"; };
+		F5AF21F42AED40E3005D7B91 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 		F5AF21CE2AECFA26005D7B91 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F5AF21F32AED40D0005D7B91 /* Extenstion */,
 				F5AF21CF2AECFA3F005D7B91 /* Subscribable.swift */,
 				F5AF21D72AED0919005D7B91 /* Binding.swift */,
 			);
@@ -344,6 +347,14 @@
 				F5AF21DC2AED18ED005D7B91 /* Navigator.swift */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		F5AF21F32AED40D0005D7B91 /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF21F42AED40E3005D7B91 /* UIView+Extensions.swift */,
+			);
+			path = Extenstion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +524,7 @@
 				F5AF21DA2AED167B005D7B91 /* MovieCastsViewController.swift in Sources */,
 				F5AF21C62AECED6A005D7B91 /* PopularMoviesViewModel.swift in Sources */,
 				F5AF21A42AECD800005D7B91 /* MovieList.swift in Sources */,
+				F5AF21F52AED40E3005D7B91 /* UIView+Extensions.swift in Sources */,
 				F5AF21AF2AECDD3F005D7B91 /* MovieMapper.swift in Sources */,
 				F5AF21D52AECFFA2005D7B91 /* MovieCell.swift in Sources */,
 				F5AF21EB2AED22C1005D7B91 /* CastMapper.swift in Sources */,

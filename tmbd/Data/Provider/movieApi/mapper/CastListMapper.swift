@@ -5,7 +5,6 @@
 //  Created by Tarek El Ghoul on 28/10/2023.
 //
 
-
 enum CastListMapper {
     
     static func map(dto: CastListDto) -> CastList {

@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: Resolver
+
 
 extension Resolver: ResolverRegistering {
     
@@ -53,7 +55,4 @@ private extension Resolver {
     static func createMovieProvider() -> MovieProviderProtocol {
         return MovieProvider() as MovieProviderProtocol
     }
-    
-    
-    
 }

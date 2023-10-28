@@ -9,16 +9,22 @@ import Resolver
 
 class MovieCastsViewModel: Subscribable {
     
+    // MARK: - Private properties
+    
     @Injected private var movieManager: MovieManagerProtocol
     @Mutable.LateInit private(set) var movie: Movie
     @Mutable private(set) var castList: CastList = CastList(cast: [])
     
-    func initialize(movie: Movie) {
-        self.movie = movie
-    }
+    // MARK: - Lifecycle
     
     func onViewDidload() {
         getCast()
+    }
+    
+    // MARK: - Public function
+    
+    func initialize(movie: Movie) {
+        self.movie = movie
     }
     
     func getCast() {

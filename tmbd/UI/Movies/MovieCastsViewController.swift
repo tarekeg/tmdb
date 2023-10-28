@@ -11,16 +11,21 @@ import Kingfisher
 
 class MovieCastsViewController: UIViewController, Subscribable {
     
+    // MARK: - IBOutles
+    
     @IBOutlet private weak var movieTitleLabel: UILabel!
     @IBOutlet private weak var movieImageView: UIImageView!
     @IBOutlet private weak var movieSynopsisLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
+    
+    // MARK: - Private properties
     
     private lazy var viewModel: MovieCastsViewModel = MovieCastsViewModel()
     private var movie: Movie?
     private var casts: [Cast] = []
     private let castCellIdentifier = "CastCell"
     
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +35,14 @@ class MovieCastsViewController: UIViewController, Subscribable {
         setupUI()
     }
     
+    // MARK: - Public functions
+    
     func initialize(with movie: Movie) {
         viewModel.initialize(movie: movie)
         self.movie = movie
     }
+    
+    // MARK: - Private functions
     
     private func setupCollectionView() {
         let nib = UINib(nibName: castCellIdentifier, bundle: nil)
@@ -68,6 +77,8 @@ class MovieCastsViewController: UIViewController, Subscribable {
         movieImageView.kf.setImage(with: url)
     }
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension MovieCastsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

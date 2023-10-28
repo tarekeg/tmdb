@@ -9,22 +9,30 @@ import Resolver
 
 class PopularMoviesViewModel: Subscribable {
     
-    @Injected private var movieManager: MovieManagerProtocol
     
-    @Mutable private(set) var movies: [Movie] = []
+    // MARK: - Private properties
+    
     private var moviesList: MovieList = MovieList(movies: [], page: 1, totalPages: 1)
+    @Mutable private(set) var movies: [Movie] = []
     private var lastLoadedPage: Int = 1
     private var isLoadingNextPage = false
+    private let navigator: NavigatorProtocol
     
-    let navigator: NavigatorProtocol
+    // MARK: - Dependencies
+   
+    @Injected private var movieManager: MovieManagerProtocol
     
     init(navigator: NavigatorProtocol) {
         self.navigator = navigator
     }
     
+    // MARK: - Lifecycle
+    
     func onViewDidLoad() {
         getPopularMovies()
     }
+    
+    // MARK: - Public functions
     
     func getPopularMovies() {
         sub(movieManager.getMovies(atPage: lastLoadedPage).subscribe(
@@ -60,6 +68,8 @@ class PopularMoviesViewModel: Subscribable {
         isLoadingNextPage = true
         getPopularMovies()
     }
+    
+    // MARK: - Navigation
     
     func onMovieTapped(movie: Movie) {
         navigator.toMovieDetail(movie)

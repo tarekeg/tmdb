@@ -10,10 +10,14 @@ import Kingfisher
 import Alamofire
 
 class MovieCell: UITableViewCell {
+    
+    // MARK: - IBOutlets
 
     @IBOutlet private weak var movieImageView: UIImageView!
     @IBOutlet private weak var movieTitleLabel: UILabel!
     @IBOutlet private weak var movieAverageLabel: UILabel!
+    
+    // MARK: - Public functions
     
     func configure(with movie: Movie) {
         movieTitleLabel.text = movie.title
@@ -21,7 +25,9 @@ class MovieCell: UITableViewCell {
         downloadImage(imageStringUrl: movie.posterPath)
     }
     
-    func downloadImage(imageStringUrl: String) {
+    // MARK: - Private functions
+    
+    private func downloadImage(imageStringUrl: String) {
         guard let url = URL(string: "https://image.tmdb.org/t/p/w500" + imageStringUrl) else {
             return
         }

@@ -10,14 +10,19 @@ import Resolver
 
 class PopularMoviesViewController: UIViewController, Subscribable {
     
+    // MARK: IBOutles
+    
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet weak private var tableView: UITableView!
+    
+    // MARK: Private properties
     
     private lazy var viewModel: PopularMoviesViewModel = PopularMoviesViewModel(navigator: Resolver.resolve(args: self))
     private let movieCellIdentifier = "MovieCell"
     private var movies: [Movie] = []
     private var filteredData: [Movie] = []
     
-    @IBOutlet private weak var searchBar: UISearchBar!
-    @IBOutlet weak private var tableView: UITableView!
+    // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +31,8 @@ class PopularMoviesViewController: UIViewController, Subscribable {
         setupTableView()
         searchBar.delegate = self
     }
+    
+    // MARK: Private functions
     
     private func setupTableView() {
         let nib = UINib(nibName: movieCellIdentifier, bundle: nil)
@@ -44,10 +51,9 @@ class PopularMoviesViewController: UIViewController, Subscribable {
         self.movies = movies
         tableView.reloadData()
     }
-
-
-
 }
+
+// MARK: - UITableViewDataSource
 
 extension PopularMoviesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,6 +68,8 @@ extension PopularMoviesViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension PopularMoviesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -75,6 +83,8 @@ extension PopularMoviesViewController: UITableViewDelegate {
     }
 
 }
+
+// MARK: - UISearchBarDelegate
 
 extension PopularMoviesViewController: UISearchBarDelegate {
     
