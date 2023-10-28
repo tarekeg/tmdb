@@ -7,6 +7,7 @@
 
 import UIKit
 import Resolver
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window?.rootViewController = UIStoryboard(name: "Movies", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
-
+        IQKeyboardManager.shared.enable = true
+        
         return true
     }
 

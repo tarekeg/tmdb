@@ -52,6 +52,7 @@
 		F5AF21EB2AED22C1005D7B91 /* CastMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF21EA2AED22C1005D7B91 /* CastMapper.swift */; };
 		F5AF21EE2AED2960005D7B91 /* CastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF21EC2AED2960005D7B91 /* CastCell.swift */; };
 		F5AF21EF2AED2960005D7B91 /* CastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5AF21ED2AED2960005D7B91 /* CastCell.xib */; };
+		F5AF21F22AED3BB5005D7B91 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F5AF21F12AED3BB5005D7B91 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 				F5AF21B82AECE24E005D7B91 /* ReactiveMoya in Frameworks */,
 				F5AF21972AEC7C32005D7B91 /* SkeletonView in Frameworks */,
 				F5AF21942AEC7C0F005D7B91 /* RxSwift in Frameworks */,
+				F5AF21F22AED3BB5005D7B91 /* IQKeyboardManagerSwift in Frameworks */,
 				F5AF21B62AECE24E005D7B91 /* Moya in Frameworks */,
 				F5AF21922AEC7C0F005D7B91 /* RxRelay in Frameworks */,
 				F5AF21CD2AECEE27005D7B91 /* Resolver-Static in Frameworks */,
@@ -372,6 +374,7 @@
 				F5AF21C82AECEE27005D7B91 /* Resolver */,
 				F5AF21CA2AECEE27005D7B91 /* Resolver-Dynamic */,
 				F5AF21CC2AECEE27005D7B91 /* Resolver-Static */,
+				F5AF21F12AED3BB5005D7B91 /* IQKeyboardManagerSwift */,
 			);
 			productName = tmbd;
 			productReference = F5AF215B2AEC4ABA005D7B91 /* tmbd.app */;
@@ -451,6 +454,7 @@
 				F5AF21982AEC7C69005D7B91 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				F5AF21B42AECE24E005D7B91 /* XCRemoteSwiftPackageReference "Moya" */,
 				F5AF21C72AECEE27005D7B91 /* XCRemoteSwiftPackageReference "Resolver" */,
+				F5AF21F02AED3BB5005D7B91 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = F5AF215C2AEC4ABA005D7B91 /* Products */;
 			projectDirPath = "";
@@ -903,6 +907,14 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		F5AF21F02AED3BB5005D7B91 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -960,6 +972,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F5AF21C72AECEE27005D7B91 /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = "Resolver-Static";
+		};
+		F5AF21F12AED3BB5005D7B91 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5AF21F02AED3BB5005D7B91 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

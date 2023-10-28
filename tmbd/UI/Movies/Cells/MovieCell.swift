@@ -17,7 +17,7 @@ class MovieCell: UITableViewCell {
     
     func configure(with movie: Movie) {
         movieTitleLabel.text = movie.title
-        movieAverageLabel.text = String(movie.voteAverage)
+        movieAverageLabel.text = String(format: "%.1f", movie.voteAverage)
         downloadImage(imageStringUrl: movie.posterPath)
     }
     
